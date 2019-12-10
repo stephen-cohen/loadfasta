@@ -22,6 +22,7 @@ load_fasta(char *file)
 
 	/* Find file size to figure out required buffer size */
 	f = fopen(file, "r");
+	if (f == NULL) return NULL;
 	fseek(f, 0, SEEK_END);
 	file_size = ftell(f);
 	rewind(f);
@@ -72,8 +73,10 @@ load_fasta(char *file)
 void
 del_fasta(struct fasta_file *fasta)
 {
-	if (fasta->name != NULL) free(fasta->name);
-	if (fasta->seq != NULL) free(fasta->seq);
-	if (fasta->data != NULL) free(fasta->data);
-	free(fasta);
+	if (fasta != NULL) {
+		if (fasta->name != NULL) free(fasta->name);
+		if (fasta->seq != NULL) free(fasta->seq);
+		if (fasta->data != NULL) free(fasta->data);
+		free(fasta);
+	}
 }
