@@ -41,9 +41,10 @@ make
 I decided to write this because I couldn't find a simple C function or library
 to just load fasta files.
 
-As a caveat: in this version, there is no error handling. For example, it won't
-work if you try to open a nonexistent file, and I have not tested with
-improperly formatted input. I may implement error handling at a later date.
+As a caveat: in this version, there is minimal error handling. For example,
+`load_fasta()` returns `NULL` if you try to open a nonexistent file, but
+improperly formatted input may cause unexpected results. I may improve error
+handling in the future.
 
 ## License
 
