@@ -2,7 +2,7 @@
 
 loadfasta.c contains functions for loading standard fasta files into memory in
 a C program. It should be fairly fast - testing on my laptop by loading a file
-with ~5 Mbases took 0.212838 sec.
+with ~5 Mbases took 0.213 sec.
 
 ## To use
 
@@ -42,10 +42,10 @@ I decided to write this because I couldn't find a simple C function or library
 to just load fasta files.
 
 As a caveat: in this version, there is no error handling. For example, it won't
-work if you try to open a non-existant file, and I have not tested with
-improperly formatted files. I may implement error handling at a later date.
+work if you try to open a nonexistent file, and I have not tested with
+improperly formatted input. I may implement error handling at a later date.
 
 ## License
 
 loadfasta is licensed under CC0 1.0 Universal. See the `LICENSE` file for all
-the details. I'm releasing it under the public domain to make using it easy.
+the details. I'm releasing it under the public domain to make it easy to use.
