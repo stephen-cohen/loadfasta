@@ -34,7 +34,7 @@ main()
 	printf("The complete sequence for contig 1 is:\n%s\n", *(fa->seq+0));
 
 	/* Display a single character. */
-	printf("The 7th, 8th, and 9th characters from contig 1 are ");
+	printf("The 7th, 8th and 9th characters from contig 1 are ");
 	printf("%c, %c and %c\n", *(*(fa->seq+0)+6), *(*(fa->seq+0)+7), *(*(fa->seq+0)+8));
 
 	/* The file should be unloaded to prevent memory leaks. */
