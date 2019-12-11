@@ -26,14 +26,26 @@ on a single line or broken up (e.g. with the NCBI 60 character-per-line format).
 
 ## Example code
 
-For examples of how to use the code, see the `example.c` file in the `example`
-directory. You can try to run this example with the following:
+The `example` directory contains the `example.c` file, which shows how to use
+the functions and how to access the data within the structure. You can try to
+run this example with the following:
 
 ```
 git clone https://github.com/stephen-cohen/loadfasta.git
 cd loadfasta/example
 make
 ./example
+```
+
+The `kcount` directory contains a more functional example of how these functions
+might be used in a finished product. It searches through a fasta file for a
+given kmer. You can try to run this with the following:
+
+```
+git clone https://github.com/stephen-cohen/loadfasta.git
+cd loadfasta/kcount
+make
+./kcount AATT ../example/sequence.fa
 ```
 
 ## Rational and caveat
