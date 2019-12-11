@@ -19,7 +19,7 @@ main()
 	t = clock();
 	fa = load_fasta("sequence.fa");
 	t = clock() - t;
-	printf("sequence.fa loaded in %f sec \n", ((double) t)/CLOCKS_PER_SEC);
+	printf("sequence.fa loaded in %f sec ", ((double) t)/CLOCKS_PER_SEC);
 
 	/* Display number of contigs loaded. */
 	printf("and contains %d contig(s).\n", fa->n_contigs);
